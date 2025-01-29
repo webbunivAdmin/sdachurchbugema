@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
 
 export function MainNav() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
@@ -15,7 +15,13 @@ export function MainNav() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image src="/church-logo.png" alt="Church Logo" width={180} height={50} className="h-12 w-auto" />
+            <Image
+              src="/church-logo.png"
+              alt="Church Logo"
+              width={180}
+              height={50}
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -26,13 +32,22 @@ export function MainNav() {
             <Link href="/about" className="text-gray-600 hover:text-primary">
               About
             </Link>
-            <Link href="/departments" className="text-gray-600 hover:text-primary">
+            <Link
+              href="/departments"
+              className="text-gray-600 hover:text-primary"
+            >
               Departments
             </Link>
-            <Link href="/administrative-entities" className="text-gray-600 hover:text-primary">
+            <Link
+              href="/administrative-entities"
+              className="text-gray-600 hover:text-primary"
+            >
               Administrative Entities
             </Link>
-            <Link href="/institutions" className="text-gray-600 hover:text-primary">
+            <Link
+              href="/institutions"
+              className="text-gray-600 hover:text-primary"
+            >
               Institutions
             </Link>
             <Link href="/news" className="text-gray-600 hover:text-primary">
@@ -63,7 +78,10 @@ export function MainNav() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden p-2 rounded-md text-gray-600" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="lg:hidden p-2 rounded-md text-gray-600"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -115,13 +133,25 @@ export function MainNav() {
                 News
               </Link>
               <div className="border-t border-gray-200 mt-2 pt-2">
-                <Button variant="ghost" className="w-full justify-start text-primary" onClick={() => setIsOpen(false)}>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Resources
                 </Button>
-                <Button variant="ghost" className="w-full justify-start text-primary" onClick={() => setIsOpen(false)}>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Our Identity
                 </Button>
-                <Button variant="ghost" className="w-full justify-start text-primary" onClick={() => setIsOpen(false)}>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Our Belief
                 </Button>
               </div>
@@ -130,6 +160,5 @@ export function MainNav() {
         )}
       </nav>
     </header>
-  )
+  );
 }
-
