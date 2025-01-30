@@ -39,7 +39,7 @@ export function RightSidebar() {
           alt="SDA Logo"
           layout="fill"
           objectFit="contain"
-          className={`transition-opacity duration-300 ${scrollPercentage < 50 ? "opacity-100" : "opacity-0"}`}
+          className={`transition-opacity duration-300 ${scrollPercentage < 100 ? "opacity-100" : "opacity-0"}`}
         />
       </div>
     </div>
