@@ -9,9 +9,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images = [
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home1-nOxrzHoVuy1Sp9b8Fy8mGZSt5IjWuE.png",
-  "/placeholder.svg?height=1080&width=1920",
-  "/placeholder.svg?height=1080&width=1920",
+  "/banner4.jpeg",
+  "/banner5.jpeg",
+  "/banner1.jpeg",
 ];
 
 export function HeroCarousel() {
@@ -33,7 +33,7 @@ export function HeroCarousel() {
   };
 
   return (
-    <section className="relative min-h-screen pt-20">
+    <section className="relative min-h-screen pt-20 overflow-hidden">
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index} className="relative h-screen">

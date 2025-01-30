@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,47 +12,37 @@ import {
   InstagramIcon as Tiktok,
 } from "lucide-react";
 import { MainNav } from "@/components/main-nav";
+import { HeroCarousel } from "@/components/hero-carousel";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-hidden">
       <MainNav />
-      {/* Hero Section */}
-      <section className="relative min-h-screen pt-20">
-        <Image
-          src="/banner4.jpeg"
-          alt="Church gathering"
-          fill
-          className="object-cover brightness-50"
-          priority
-        />
-        <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Welcome to
-              <br />
-              <span className="text-highlight">Bugema University</span>
-              <br />
-              Seventh-day Adventist Church
-            </h1>
-            <p className="text-xl text-white mb-8">
-              Building Faith, Strengthening Community, Preparing for His Return.
-            </p>
-            <Button className="bg-primary hover:bg-primary/90 text-white">
-              Join Us
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* Mission Statement Section */}
       <section className="py-16 bg-white">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
+      <div className="container mx-auto px-4">
+          <h2
+            className="text-3xl font-bold text-center mb-12"
+            data-aos="fade-up"
+          >
             Mission Statement
           </h2>
           <div className="grid md:grid-cols-3 gap-8 px-4 sm:px-0">
-            <div className="text-center">
+            <div
+              className="text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="mb-4 flex justify-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-primary text-2xl">🎯</span>
@@ -64,7 +57,11 @@ export default function Home() {
                 Angels{"'"} Messages in preparation for His soon return
               </p>
             </div>
-            <div className="text-center">
+            <div
+              className="text-center"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div className="mb-4 flex justify-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-primary text-2xl">👁️</span>
@@ -79,7 +76,11 @@ export default function Home() {
                 to full harmony with His perfect will and righteousness.
               </p>
             </div>
-            <div className="text-center">
+            <div
+              className="text-center"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <div className="mb-4 flex justify-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-primary text-2xl">📚</span>
@@ -100,9 +101,9 @@ export default function Home() {
 
       {/* About Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container">
+      <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center px-4 sm:px-0">
-            <div>
+            <div data-aos="fade-right">
               <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-primary mb-4">
                 Seventh Day Adventist
               </div>
@@ -119,7 +120,7 @@ export default function Home() {
                 About Us
               </Button>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px]" data-aos="fade-left">
               <Image
                 src="/banner5.jpeg"
                 alt="Church activities"
@@ -140,7 +141,7 @@ export default function Home() {
           className="object-cover brightness-50"
         />
         <div className="relative container">
-          <div className="max-w-lg">
+          <div className="max-w-lg" data-aos="fade-up">
             <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-white mb-4">
               A Word From God
             </div>
@@ -160,13 +161,16 @@ export default function Home() {
 
       {/* News & Events Section */}
       <section className="py-16 bg-white">
-        <div className="container">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-12 px-4 sm:px-0">
+      <div className="container mx-auto px-4">
+          <div
+            className="flex flex-col sm:flex-row justify-between items-center mb-12 px-4 sm:px-0"
+            data-aos="fade-up"
+          >
             <h2 className="text-3xl font-bold">News & Events</h2>
             <Button variant="outline">All News</Button>
           </div>
           <div className="grid md:grid-cols-3 gap-8 px-4 sm:px-0">
-            <Card>
+            <Card data-aos="fade-up" data-aos-delay="200">
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
@@ -182,7 +186,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">January 2, 2025</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card data-aos="fade-up" data-aos-delay="400">
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
@@ -198,7 +202,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">December 2, 2024</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card data-aos="fade-up" data-aos-delay="600">
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
@@ -218,9 +222,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#111827] text-white py-12">
-        <div className="container">
+      <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 px-4 sm:px-0">
-            <div>
+            <div data-aos="fade-up">
               <Image
                 src="/logo.png"
                 alt="Church Logo"
@@ -230,7 +234,7 @@ export default function Home() {
               />
               <p className="text-gray-400">We are happy to have you!</p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="200">
               <h3 className="text-xl font-bold mb-4">Address</h3>
               <p className="text-gray-400">Naalya —</p>
               <p className="text-gray-400">
@@ -238,7 +242,7 @@ export default function Home() {
               </p>
               <p className="text-gray-400">Plot —</p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="400">
               <h3 className="text-xl font-bold mb-4">Say hello</h3>
               <p className="text-gray-400 underline mb-2">
                 info@mtolivesdachurch.com
@@ -247,7 +251,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center px-4 sm:px-0">
-            <div className="flex gap-4 mb-4 md:mb-0">
+            <div className="flex gap-4 mb-4 md:mb-0" data-aos="fade-up">
               <Link href="#" className="text-gray-400 hover:text-white">
                 Our beliefs
               </Link>
@@ -258,7 +262,7 @@ export default function Home() {
                 Contacts
               </Link>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4" data-aos="fade-up" data-aos-delay="200">
               <Link href="#" className="text-gray-400 hover:text-white">
                 <Facebook className="h-5 w-5" />
               </Link>
@@ -273,7 +277,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <p className="text-center text-gray-400 mt-8">
+          <p
+            className="text-center text-gray-400 mt-8"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             © 2025. All Rights Reserved.
           </p>
         </div>
