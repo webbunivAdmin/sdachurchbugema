@@ -118,7 +118,7 @@ export function MainNav() {
                 className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                About
+                About Us
               </Link>
               <Link
                 href="/departments"
