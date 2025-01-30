@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen pt-20">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home1-nOxrzHoVuy1Sp9b8Fy8mGZSt5IjWuE.png"
+          src="/banner4.jpeg"
           alt="Church gathering"
           fill
           className="object-cover brightness-50"
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home4-2nLe31USpjFzvMciYBYZ7tTJuIS6OS.png"
+                src="/banner5.jpeg"
                 alt="Church activities"
                 fill
                 className="object-cover rounded-lg"
@@ -118,7 +118,7 @@ export default function Home() {
       {/* Weekly Sermons Section */}
       <section className="relative py-24">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home6-tCxXy966sBKEJu2ZNJf1KSHgKLJmm4.png"
+          src="/banner1.jpeg"
           alt="Prayer background"
           fill
           className="object-cover brightness-50"
@@ -150,7 +150,7 @@ export default function Home() {
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home5-KDrLZHeIeXpr2gaDOdACyjQs6UqeWj.png"
+                    src="/banner2.jpeg"
                     alt="New Year Statement"
                     fill
                     className="object-cover rounded"
@@ -164,7 +164,7 @@ export default function Home() {
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home5-KDrLZHeIeXpr2gaDOdACyjQs6UqeWj.png"
+                    src="/banner3.jpeg"
                     alt="Death Announcement"
                     fill
                     className="object-cover rounded"
@@ -178,7 +178,7 @@ export default function Home() {
               <CardContent className="p-4">
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home5-KDrLZHeIeXpr2gaDOdACyjQs6UqeWj.png"
+                    src="/banner1.jpeg"
                     alt="Graduation"
                     fill
                     className="object-cover rounded"
@@ -198,7 +198,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 px-4 sm:px-0">
             <div>
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/footer-6eYvTVzs7CFXr1e0lYu9vu2kjHnfpB.png"
+                src="/logo.png"
                 alt="Church Logo"
                 width={200}
                 height={100}

@@ -16,7 +16,7 @@ export function MainNav() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/church-logo.png"
+              src="/logo.png"
               alt="Church Logo"
               width={180}
               height={50}
