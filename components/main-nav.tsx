@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -8,10 +8,27 @@ import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <nav className="container mx-auto px-4">
+    <header className={`fixed top-0 left-0 right-16 z-50 transition-all duration-300 lg:pr-[30px] ${isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-white"} `}>
+      <nav className="container mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -20,59 +37,58 @@ export function MainNav() {
               alt="Church Logo"
               width={180}
               height={50}
-              className="h-12 w-auto"
+              className="h-[100px] w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/" className="text-primary hover:text-primary/80">
-              Home
+          <div className="hidden lg:flex items-center space-x-2 ">
+            <Link href="/">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Home
+              </Button>
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-primary">
-              About
+            <Link href="/about">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                About
+              </Button>
             </Link>
-            <Link
-              href="/departments"
-              className="text-gray-600 hover:text-primary"
-            >
-              Departments
+            <Link href="/institutions">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Institutions
+              </Button>
             </Link>
-            <Link
-              href="/administrative-entities"
-              className="text-gray-600 hover:text-primary"
-            >
-              Administrative Entities
+            <Link href="/news">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                News
+              </Button>
             </Link>
-            <Link
-              href="/institutions"
-              className="text-gray-600 hover:text-primary"
-            >
-              Institutions
+            <Link href="/our-identity">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Our Identity
+              </Button>
             </Link>
-            <Link href="/news" className="text-gray-600 hover:text-primary">
-              News
+            <Link href="/our-belief">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Our Belief
+              </Button>
+            </Link>
+            <Link href="/resources">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Resources
+              </Button>
             </Link>
           </div>
 
           {/* Desktop Right Side */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="ghost" className="text-primary">
-              Resources
-            </Button>
-            <Button variant="ghost" className="text-primary">
-              Our Identity
-            </Button>
-            <Button variant="ghost" className="text-primary">
-              Our Belief
-            </Button>
-            <Link href="#" className="text-gray-600 hover:text-primary">
+          <div className="hidden lg:flex items-center space-x-6">
+            <Link href="#" className="text-[#2F557F] hover:text-primary">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-primary">
+            <Link href="#" className="text-[#2F557F] hover:text-primary">
               <Twitter className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-primary">
+            <Link href="#" className="text-[#2F557F] hover:text-primary">
               <Instagram className="h-5 w-5" />
             </Link>
           </div>
@@ -116,7 +132,7 @@ export function MainNav() {
                 className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                Administrative Entities
+                Entities
               </Link>
               <Link
                 href="/institutions"
