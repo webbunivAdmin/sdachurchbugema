@@ -114,7 +114,7 @@ export default function Home() {
                   and communion.
                 </p>
                 <Link href="/about">
-                  <Button className="bg-primary hover:bg-primary/90 text-white">
+                  <Button className="bg-[#2F557F] hover:bg-[#3a6699] text-white">
                     About Us
                   </Button>
                 </Link>
@@ -152,7 +152,7 @@ export default function Home() {
                 teaching, singing, praying and celebrating baptism and
                 communion.
               </p>
-              <Button className="bg-primary hover:bg-primary/90 text-white">
+              <Button className="bg-[#2F557F] hover:bg-[#3a6699]">
                 All Sermons
               </Button>
             </div>
@@ -167,7 +167,9 @@ export default function Home() {
               data-aos="fade-up"
             >
               <h2 className="text-3xl font-bold">News & Events</h2>
-              <Button variant="outline">All News</Button>
+              <Link href="/news">
+                <Button className="bg-[#2F557F] hover:bg-[#3a6699]">All News</Button>   
+              </Link>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <Card data-aos="fade-up" data-aos-delay="200">
