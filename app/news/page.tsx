@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { EventsCard } from "@/components/events-card";
 
 export default function NewsPage() {
   useEffect(() => {
@@ -56,18 +57,20 @@ export default function NewsPage() {
         <div className="p-5 mb-10 flex flex-col md:flex-row gap-10 md:gap-5 justify-center items-center">
           <div className="flex flex-col justify-start">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-sm text-gray-500">January 29, 2025</span>
+              <span className="text-sm text-gray-500">March 13, 2025</span>
               <span className="text-sm text-primary">CRISIS</span>
             </div>
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-              Southern California Conference Moves Quickly to Mobilize Outreach
-              as Wildfires Descend
+              North Buganda Conference Moves Quickly to Mobilize Outreach as
+              Wildfires Descend
             </h1>
             <p className="text-gray-600 mb-6">
               The Southern California Conference has been serving as a central
               hub for providing aid to impacted communities.
             </p>
-            <Button className="w-fit">Read More</Button>
+            <Link href="/news/north-buganda">
+              <Button className="w-fit">Read More</Button>
+            </Link>
           </div>
           <div className="flex flex-col justify-start">
             <div className="flex items-center gap-2 mb-4">
@@ -82,7 +85,9 @@ export default function NewsPage() {
               The Southern California Conference has been serving as a central
               hub for providing aid to impacted communities.
             </p>
-            <Button className="w-fit">Read More</Button>
+            <Link href="/news/southern-california">
+              <Button className="w-fit">Read More</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -122,22 +127,16 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Topics */}
+      {/* Events */}
       <section className="py-10 md:px-8">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold">Topics</h2>
-            <Link
-              href="/topics"
-              className="text-[#2F557F] flex items-center gap-2 hover:text-[#416894]"
-            >
-              More topics <ArrowRight className="h-4 w-4" />
-            </Link>
+            <h2 className="text-2xl font-bold">Upcoming Events</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-6">Healthcare</h3>
-              <NewsCard
+              <EventsCard
                 title="Belém Adventist Hospital Celebrates Renewal of Qmentum Diamond Seal"
                 image="/_MG_7809.JPG"
                 date="January 29, 2025"
@@ -147,7 +146,7 @@ export default function NewsPage() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-6">Humanitarian</h3>
-              <NewsCard
+              <EventsCard
                 title="Southern California Conference Moves Quickly to Mobilize Outreach."
                 image="/ABOUT SDAC.JPG"
                 date="January 29, 2025"
@@ -157,7 +156,7 @@ export default function NewsPage() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-6">Mission</h3>
-              <NewsCard
+              <EventsCard
                 title="Adventist Organizations Offers Free Medical and Dental Care in Philippine City"
                 image="/_MG_7809.JPG"
                 date="January 28, 2025"
@@ -169,17 +168,11 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Americas Section */}
+      {/* News Section */}
       <section className="py-10 md:px-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold">Americas</h2>
-            <Link
-              href="/regions/americas"
-              className="text-[#2F557F] flex items-center gap-2 hover:text-[#4771a1]"
-            >
-              More from Americas <ArrowRight className="h-4 w-4" />
-            </Link>
+            <h2 className="text-2xl font-bold">Latest News</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <NewsCard

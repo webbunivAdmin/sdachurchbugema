@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 
-interface NewsCardProps {
+interface EventsCardProps {
   title: string
   image: string
   date: string
@@ -10,10 +10,10 @@ interface NewsCardProps {
   description?: string
 }
 
-export function NewsCard({ title, image, date, category, description }: NewsCardProps) {
+export function EventsCard({ title, image, date, category, description }: EventsCardProps) {
   return (
     <Card className="overflow-hidden">
-      <Link href={`/news/${title}`} className="block">
+      <Link href={`/events/${title}`} className="block">
         <div className="relative h-48 w-full">
           <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
         </div>
@@ -22,7 +22,7 @@ export function NewsCard({ title, image, date, category, description }: NewsCard
             <span className="text-sm text-gray-500">{date}</span>
             <span className="text-sm text-[#2F557F]">{category}</span>
           </div>
-          <Link href={`/news/${title}`} className="font-bold  hover:text-[#2F557F] transition-colors">{title}</Link>
+          <Link href={`/events/${title}`} className="font-bold hover:text-[#2F557F] transition-colors">{title}</Link>
           {description && <p className="text-gray-600 text-sm mt-2">{description}</p>}
         </CardContent>
       </Link>
