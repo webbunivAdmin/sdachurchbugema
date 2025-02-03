@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
       <div className="pr-[100px]">
+        
         <MainNav />
         <HeroCarousel />
 
