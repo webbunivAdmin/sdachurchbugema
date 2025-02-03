@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const images = ["/_MG_2240.JPG",  "/_MG_7809.JPG", "/_MG_2211.JPG"];
+const images = ["/_MG_7809.JPG", "/_MG_2211.JPG", "/_MG_2240.JPG"];
 
 export function HeroCarousel() {
   useEffect(() => {
@@ -40,6 +40,7 @@ export function HeroCarousel() {
               className="object-cover brightness-50"
               priority={index === 0}
             />
+            <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-6 lg:px-12">
               <div className="container mx-auto flex flex-col gap-2">
                 <div
@@ -57,7 +58,7 @@ export function HeroCarousel() {
                   Bugema University
                 </div>
                 <div
-                  className="text-2xl sm:text-4xl lg:text-[50px] font-bold text-white/80 pb-10 mb-10 border-b-2 border-white w-[850px]"
+                  className="text-2xl sm:text-4xl lg:text-[50px] font-bold text-white/80 mb-10  w-[850px]"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >

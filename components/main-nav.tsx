@@ -57,24 +57,19 @@ export function MainNav() {
                 About
               </Button>
             </Link>
-            <Link href="/institutions">
-              <Button variant="ghost" className="text-[#2F557F] text-base">
-                Institutions
-              </Button>
-            </Link>
             <Link href="/news">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 News
               </Button>
             </Link>
-            <Link href="/our-identity">
-              <Button variant="ghost" className="text-[#2F557F] text-base">
-                Our Identity
-              </Button>
-            </Link>
             <Link href="/our-beliefs">
               <Button variant="ghost" className="text-[#2F557F] text-base">
-                Our Belief
+                Our Beliefs
+              </Button>
+            </Link>
+            <Link href="/institutions">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Institutions
               </Button>
             </Link>
             <Link href="/resources">
@@ -112,69 +107,47 @@ export function MainNav() {
             <div className="flex flex-col gap-4">
               <Link
                 href="/"
-                className="text-primary font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                className="text-[#2F557F] font-medium px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
+                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
                 About Us
               </Link>
+              
               <Link
-                href="/departments"
-                className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
+                href="/news"
+                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                Departments
+                News
               </Link>
               <Link
-                href="/administrative-entities"
-                className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
+                href="/our-beliefs"
+                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                Entities
+                Our Beliefs
               </Link>
               <Link
                 href="/institutions"
-                className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
+                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
                 Institutions
               </Link>
               <Link
-                href="/news"
-                className="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100"
+                href="/resources"
+                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                News
+                Resources
               </Link>
-              <div className="border-t border-gray-200 mt-2 pt-2">
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Resources
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Our Identity
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Our Belief
-                </Button>
-              </div>
             </div>
           </div>
         )}
