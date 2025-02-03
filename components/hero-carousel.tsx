@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const images = ["/banner4.jpeg", "/banner5.jpeg", "/banner1.jpeg"];
+const images = ["/_MG_2240.JPG",  "/_MG_7809.JPG", "/_MG_2211.JPG"];
 
 export function HeroCarousel() {
   useEffect(() => {
