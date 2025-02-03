@@ -22,7 +22,7 @@ export function RightSidebar() {
 
   return (
     <div
-      className="fixed right-0 top-0 bottom-0 w-[100px] z-50 flex flex-col items-center pt-4 transition-all duration-500"
+      className="md:fixed right-0 top-0 bottom-0 w-[100px] z-50 flex flex-col items-center pt-4 transition-all duration-500"
       style={{
         backgroundColor: scrollPercentage >= 50 ? "#FFFFFF" : "#2F557F", // Change color on scroll
       }}

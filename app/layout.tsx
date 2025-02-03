@@ -33,7 +33,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <RightSidebar />
+        <div className="hidden md:flex">
+          <RightSidebar />
+        </div>
         <Footer />
       </body>
     </html>
