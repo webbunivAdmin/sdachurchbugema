@@ -8,32 +8,36 @@ import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-16 z-50 transition-all duration-300 lg:pr-[30px] ${isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-white"} `}>
+    <header
+      className={`fixed top-0 left-0 right-16 z-50 transition-all duration-300 lg:pr-[30px] ${
+        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-white"
+      } `}
+    >
       <nav className="container mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/logo.png"
+              src="/NAV LOGO.png"
               alt="Church Logo"
               width={180}
               height={50}
