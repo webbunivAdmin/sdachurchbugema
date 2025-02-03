@@ -29,7 +29,7 @@ const Footer = () => {
           <div data-aos="fade-up" data-aos-delay="400">
             <h3 className="text-xl font-bold mb-4">Say hello</h3>
             <p className="text-gray-400 underline mb-2">
-              infosdacbugeamauniversity@bugemauniv.ac.ug
+              infosdacbugemauniversity@bugemauniv.ac.ug
             </p>
             <p className="text-gray-400">+256 772 517374</p>
           </div>
