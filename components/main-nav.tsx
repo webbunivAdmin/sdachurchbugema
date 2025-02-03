@@ -28,11 +28,11 @@ export function MainNav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-16 z-50 transition-all duration-300 lg:pr-[30px] ${
+      className={`fixed top-0 left-0 right-0 md:right-16 z-50 transition-all duration-300 lg:pr-[30px] ${
         isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-white"
       } `}
     >
-      <nav className="container mx-auto">
+      <nav className="md:container md:mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -41,7 +41,7 @@ export function MainNav() {
               alt="Church Logo"
               width={180}
               height={50}
-              className="h-[100px] w-auto"
+              className="h-[70px] md:h-[80px] w-auto"
             />
           </Link>
 
@@ -72,7 +72,7 @@ export function MainNav() {
                 Our Identity
               </Button>
             </Link>
-            <Link href="/our-belief">
+            <Link href="/our-beliefs">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Our Belief
               </Button>
