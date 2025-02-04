@@ -1,12 +1,16 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import Image from "next/image"
-import { MainNav } from "@/components/main-nav"
-import { ArrowLeft, Calendar, MapPin } from "lucide-react"
-import Link from "next/link"
-import AOS from "aos"
-import "aos/dist/aos.css"
+import { useEffect } from "react";
+import Image from "next/image";
+import { MainNav } from "@/components/main-nav";
+import { ArrowLeft, Calendar, MapPin } from "lucide-react";
+import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+interface EventDetailProps {
+  params: { slug: string };
+}
 
 // This would typically come from an API or database
 const getEventData = (slug: string) => {
@@ -29,18 +33,18 @@ const getEventData = (slug: string) => {
         <li>Current medication list</li>
       </ul>
     `,
-  }
-}
+  };
+};
 
-export default function EventDetail({ params }: { params: { slug: string } }) {
+export default function EventDetail({ params }: EventDetailProps) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-    })
-  }, [])
+    });
+  }, []);
 
-  const event = getEventData(params.slug)
+  const event = getEventData(params.slug);
 
   return (
     <main className="min-h-screen overflow-hidden pr-16">
@@ -48,7 +52,10 @@ export default function EventDetail({ params }: { params: { slug: string } }) {
 
       <article className="pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <Link href="/news" className="inline-flex items-center text-gray-600 hover:text-primary mb-8">
+          <Link
+            href="/news"
+            className="inline-flex items-center text-gray-600 hover:text-primary mb-8"
+          >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Events
           </Link>
@@ -97,6 +104,5 @@ export default function EventDetail({ params }: { params: { slug: string } }) {
         </div>
       </article>
     </main>
-  )
+  );
 }
-
