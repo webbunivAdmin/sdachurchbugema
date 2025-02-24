@@ -119,7 +119,7 @@ export function MainNav() {
               >
                 About Us
               </Link>
-              
+
               <Link
                 href="/news"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
@@ -135,11 +135,11 @@ export function MainNav() {
                 Our Beliefs
               </Link>
               <Link
-                href="/institutions"
+                href="/announcements"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                Institutions
+                Announcements
               </Link>
               <Link
                 href="/resources"

@@ -50,17 +50,17 @@ export default function AboutPage() {
             <div className="md:col-span-2" data-aos="fade-up">
               <h3 className="text-2xl font-bold mb-6">ABOUT OUR CHURCH</h3>
               <p className="text-gray-600 mb-8">
-                The Uganda Union Mission of the Seventh-day Adventist Church has
-                a deep-rooted legacy that dates back to 1906 when the first
-                Adventist missionary, E.C. Enns, entered Uganda from South
-                Nyanza, Kenya. Though Enns was the initial contact, it wasn{"'"}
-                t until 1927 that the Adventist mission officially took root in
-                Uganda. Political and religious turbulence delayed its
-                establishment, as Adventist missionaries entered a region
-                already divided among Anglican, Catholic, and Muslim
-                missionaries. Despite the adversity, the Adventist Church stood
-                firm, eventually establishing a mission station at Nchwanga in
-                1927, marking a foundational moment in our history.
+                Bugema University is deeply committed to fostering spiritual
+                growth and community involvement through its church service
+                programs. These services offer students and faculty members the
+                opportunity to participate in meaningful worship experiences,
+                Bible study groups, and outreach activities. The program
+                emphasizes faith-based education, spiritual reflection, and
+                service to others, creating a nurturing environment where
+                individuals can grow spiritually and develop leadership skills
+                for church ministry. By engaging in these services, participants
+                not only strengthen their faith but also contribute positively
+                to the surrounding community.
               </p>
 
               <h4 className="text-xl font-bold mb-4">GOVERNANCE</h4>
@@ -82,14 +82,18 @@ export default function AboutPage() {
                 of God, you are invited to explore, experience and know the One
                 who desires to make us whole.
               </p>
-              <Link href="/our-beliefs">
-                <Button
-                  variant="secondary"
-                  className="bg-white hover:bg-white/80 text-[#2F557F]"
+               <a
+                 href="https://www.adventist.org/beliefs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  READ MORE
-                </Button>
-              </Link>
+                  <Button
+                    variant="secondary"
+                    className="bg-white hover:bg-white/80 text-[#2F557F]"
+                  >
+                    READ MORE
+                  </Button>
+                </a>
             </div>
           </div>
         </div>
@@ -165,7 +169,7 @@ export default function AboutPage() {
       {/* Mission Vision Method Section */}
       <section className="py-8 my-10 bg-[#2F557F] text-white">
         <div className="container mx-auto px-4 md:px-12">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div
               className="text-center"
               data-aos="fade-up"
@@ -248,26 +252,10 @@ export default function AboutPage() {
                     fill="none"
                     className="w-full h-full"
                   >
-                    <path
-                      d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
+                    
                   </svg>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Method</h3>
-              <p className="mb-4">
-                Guided by the Bible and the Holy Spirit, Seventh-day Adventists
-                pursue this mission through Christ-like living, communicating,
-                discipling, teaching, healing, and serving.
-              </p>
-
-              <p className="text-sm opacity-75">
-                (Matt 28:18-20, Acts 1:8, Rev 14:6-12)
-              </p>
             </div>
           </div>
         </div>
