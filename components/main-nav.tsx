@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
 
 export function MainNav() {

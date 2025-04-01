@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
-import { FaFacebookMessenger, FaFacebookSquare } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import { PiTiktokLogoBold } from "react-icons/pi";
 
 export default function AboutPage() {
