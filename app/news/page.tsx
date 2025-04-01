@@ -10,9 +10,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { EventsCard } from "@/components/events";
 import { FaFacebookSquare } from "react-icons/fa";
 import { PiTiktokLogoBold } from "react-icons/pi";
+
 
 export default function NewsPage() {
   useEffect(() => {
@@ -112,18 +114,27 @@ export default function NewsPage() {
               image="/_MG_2211.JPG"
               date="January 24, 2025"
               category="ANN ENGLISH"
+
+              videoId="5MBOnP2TEO4?si=XBR9r-opxofUxFVm"
+
             />
             <VideoCard
               title="Exploring Church Discipline in the Adventist Church Manual | ANN In-Depth"
               image="/_MG_2240.JPG"
               date="January 27, 2025"
               category="ANN IN-DEPTH"
+
+              videoId="BgmmBcbuKJA?si=95Dyewizx-FaABSA"
+
             />
             <VideoCard
               title="The Great Controversy Chapter 39: The Time of Trouble"
               image="/_MG_2211.JPG"
               date="January 24, 2025"
               category="NOTEWORTHY VIDEOS"
+
+              videoId="TehSYJfQPXc?si=4XxbpERuCZ7ZaFn-"
+
             />
           </div>
         </div>
@@ -201,6 +212,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-[#111827] text-white py-12">
         <div className="container mx-auto">
@@ -261,6 +273,7 @@ export default function NewsPage() {
           </p>
         </div>
       </footer>
+
     </main>
   );
 }

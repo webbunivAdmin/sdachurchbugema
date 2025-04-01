@@ -63,6 +63,7 @@ export function MainNav() {
                 News
               </Button>
             </Link>
+
             <a href="https://www.adventist.org/beliefs/" 
               target="_blank" 
               rel="noopener noreferrer">
@@ -125,6 +126,7 @@ export function MainNav() {
               <Link
                 href="/news"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
+
                 onClick={() => setIsOpen(false)}
               >
                 News

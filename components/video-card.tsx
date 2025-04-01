@@ -4,16 +4,18 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Play } from "lucide-react"
-
+import { VideoModal } from "./video-modal"
 
 interface VideoCardProps {
   title: string
   image: string
   date: string
   category: string
+  videoId: string
 }
 
-export function VideoCard({ title, image, date, category  }: VideoCardProps) {
+export function VideoCard({ title, image, date, category, videoId }: VideoCardProps) {
+}
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
@@ -36,7 +38,8 @@ export function VideoCard({ title, image, date, category  }: VideoCardProps) {
         </button>
       </Card>
 
-      
+      <VideoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoId={videoId} />
     </>
   )
 }
+

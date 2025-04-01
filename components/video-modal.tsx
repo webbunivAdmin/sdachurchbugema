@@ -27,3 +27,4 @@ export function VideoModal({ isOpen, onClose, videoId }: VideoModalProps) {
     </Dialog>
   );
 }
+
