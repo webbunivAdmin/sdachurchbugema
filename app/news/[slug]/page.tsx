@@ -83,6 +83,8 @@ export default function NewsDetail({ params }: NewsDetailProps) {
           </div>
         </div>
       </article>
+
     </main>
   );
 }
+

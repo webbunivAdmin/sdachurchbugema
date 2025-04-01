@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
+import { PiTiktokLogoBold } from "react-icons/pi";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,16 +63,20 @@ export function MainNav() {
                 News
               </Button>
             </Link>
-            <Link href="/our-beliefs">
+
+            <a href="https://www.adventist.org/beliefs/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+             <Button variant="ghost" className="text-[#2F557F] text-base">
+               Our Beliefs
+             </Button>
+             </a>
+             <Link href="/Sermons">
               <Button variant="ghost" className="text-[#2F557F] text-base">
-                Our Beliefs
+                Sermons
               </Button>
             </Link>
-            <Link href="/institutions">
-              <Button variant="ghost" className="text-[#2F557F] text-base">
-                Institutions
-              </Button>
-            </Link>
+
             <Link href="/resources">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Resources
@@ -85,11 +90,9 @@ export function MainNav() {
               <Facebook className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-[#2F557F] hover:text-primary">
-              <Twitter className="h-5 w-5" />
+              <PiTiktokLogoBold className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-[#2F557F] hover:text-primary">
-              <Instagram className="h-5 w-5" />
-            </Link>
+          
           </div>
 
           {/* Mobile Menu Button */}
@@ -123,24 +126,19 @@ export function MainNav() {
               <Link
                 href="/news"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
+
                 onClick={() => setIsOpen(false)}
               >
                 News
               </Link>
-              <Link
-                href="/our-beliefs"
-                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
-                onClick={() => setIsOpen(false)}
-              >
+              <a href="https://www.adventist.org/beliefs/" 
+                target="_blank" 
+               rel="noopener noreferrer">
+               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Our Beliefs
-              </Link>
-              <Link
-                href="/announcements"
-                className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
-                onClick={() => setIsOpen(false)}
-              >
-                Announcements
-              </Link>
+                  </Button>
+              </a>
+
               <Link
                 href="/resources"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
