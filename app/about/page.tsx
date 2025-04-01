@@ -9,6 +9,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
+import { FaFacebookSquare } from "react-icons/fa";
+import { PiTiktokLogoBold } from "react-icons/pi";
+
+
 export default function AboutPage() {
   useEffect(() => {
     AOS.init({
@@ -50,17 +54,18 @@ export default function AboutPage() {
             <div className="md:col-span-2" data-aos="fade-up">
               <h3 className="text-2xl font-bold mb-6">ABOUT OUR CHURCH</h3>
               <p className="text-gray-600 mb-8">
-                The Uganda Union Mission of the Seventh-day Adventist Church has
-                a deep-rooted legacy that dates back to 1906 when the first
-                Adventist missionary, E.C. Enns, entered Uganda from South
-                Nyanza, Kenya. Though Enns was the initial contact, it wasn{"'"}
-                t until 1927 that the Adventist mission officially took root in
-                Uganda. Political and religious turbulence delayed its
-                establishment, as Adventist missionaries entered a region
-                already divided among Anglican, Catholic, and Muslim
-                missionaries. Despite the adversity, the Adventist Church stood
-                firm, eventually establishing a mission station at Nchwanga in
-                1927, marking a foundational moment in our history.
+
+                Bugema University is deeply committed to fostering spiritual
+                growth and community involvement through its church service
+                programs. These services offer students and faculty members the
+                opportunity to participate in meaningful worship experiences,
+                Bible study groups, and outreach activities. The program
+                emphasizes faith-based education, spiritual reflection, and
+                service to others, creating a nurturing environment where
+                individuals can grow spiritually and develop leadership skills
+                for church ministry. By engaging in these services, participants
+                not only strengthen their faith but also contribute positively
+                to the surrounding community.
               </p>
 
               <h4 className="text-xl font-bold mb-4">GOVERNANCE</h4>
@@ -82,6 +87,20 @@ export default function AboutPage() {
                 of God, you are invited to explore, experience and know the One
                 who desires to make us whole.
               </p>
+
+               <a
+                 href="https://www.adventist.org/beliefs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="secondary"
+                    className="bg-white hover:bg-white/80 text-[#2F557F]"
+                  >
+                    READ MORE
+                  </Button>
+                </a>
+
               <Link href="/our-beliefs">
                 <Button
                   variant="secondary"
@@ -90,6 +109,7 @@ export default function AboutPage() {
                   READ MORE
                 </Button>
               </Link>
+
             </div>
           </div>
         </div>
@@ -165,7 +185,9 @@ export default function AboutPage() {
       {/* Mission Vision Method Section */}
       <section className="py-8 my-10 bg-[#2F557F] text-white">
         <div className="container mx-auto px-4 md:px-12">
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-2 gap-8">
+
             <div
               className="text-center"
               data-aos="fade-up"
@@ -248,6 +270,7 @@ export default function AboutPage() {
                     fill="none"
                     className="w-full h-full"
                   >
+
                     <path
                       d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
                       stroke="currentColor"
@@ -268,10 +291,77 @@ export default function AboutPage() {
               <p className="text-sm opacity-75">
                 (Matt 28:18-20, Acts 1:8, Rev 14:6-12)
               </p>
+
             </div>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-[#111827] text-white py-12">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div data-aos="fade-up">
+                <Image
+                  src="/logo.png"
+                  alt="Church Logo"
+                  width={200}
+                  height={100}
+                  className="mb-4"
+                />
+                <p className="text-gray-400">
+                  SEVENTH-DAY ADVENTIST CHURCH <br /> BUGEMA UNIVERSITY
+                </p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h3 className="text-xl font-bold mb-4">Address</h3>
+                <p className="text-gray-400">P.O Box 6529 </p>
+                <p className="text-gray-400">kampala Uganda,</p>
+                <p className="text-gray-400">32km Gayaza - Zirobwe Rd —</p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="400">
+                <h3 className="text-xl font-bold mb-4">Say hello</h3>
+                <p className="text-gray-400 underline mb-2">
+                  infosdacbugeamauniversity@bugemauniv.ac.ug
+                </p>
+                <p className="text-gray-400">+256 772 517374</p>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+              <div className="flex gap-4 mb-4 md:mb-0" data-aos="fade-up">
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Our beliefs
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Privacy Policy
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Contacts
+                </Link>
+              </div>
+              <div
+                className="flex gap-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <FaFacebookSquare className="h-5 w-5" />
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <PiTiktokLogoBold className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+            <p
+              className="text-center text-gray-400 mt-8"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              © 2025. All Rights Reserved.
+            </p>
+          </div>
+        </footer>
+
     </main>
   );
 }

@@ -1,7 +1,8 @@
-import { Facebook, Twitter } from "lucide-react";
+import { Facebook } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { PiTiktokLogoBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
@@ -51,7 +52,7 @@ const Footer = () => {
               <Facebook className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-gray-400 hover:text-white">
-              <Twitter className="h-5 w-5" />
+              <PiTiktokLogoBold className="h-5 w-5" />
             </Link>
           </div>
         </div>
