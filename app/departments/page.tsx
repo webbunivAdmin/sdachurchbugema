@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { PiTiktokLogoBold } from "react-icons/pi";
 
-export default function SermonsPage() {
+export default function deparmentsPage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
