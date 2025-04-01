@@ -15,7 +15,6 @@ interface VideoCardProps {
 }
 
 export function VideoCard({ title, image, date, category, videoId }: VideoCardProps) {
-}
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
