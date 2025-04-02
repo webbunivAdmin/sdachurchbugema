@@ -9,17 +9,15 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaFacebookSquare } from "react-icons/fa";
-import { PiTiktokLogoBold } from "react-icons/pi";
 
-export default function deparmentsPage() {
-  useEffect(() => {
+useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
-  }, []);
+}, []);
 
+export default function deparmentsPage() {
   const [activeTab, setActiveTab] = useState("documents");
 
   const sermons = [
