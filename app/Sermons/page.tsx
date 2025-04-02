@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaFacebookSquare } from "react-icons/fa";
-import { PiTiktokLogoBold } from "react-icons/pi";
 
 export default function SermonsPage() {
   useEffect(() => {
