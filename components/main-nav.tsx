@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Facebook } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
+import { FaYoutube } from "react-icons/fa";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,33 +64,35 @@ export function MainNav() {
                 News
               </Button>
             </Link>
-
             <a href="https://www.adventist.org/beliefs/" 
-              target="_blank" 
-              rel="noopener noreferrer">
-             <Button variant="ghost" className="text-[#2F557F] text-base">
-               Our Beliefs
-             </Button>
-             </a>
+                target="_blank" 
+               rel="noopener noreferrer">
+               <Button variant="ghost" className="text-[#2F557F] text-base">
+                Our Beliefs
+                  </Button>
+              </a>
              <Link href="/Sermons">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Sermons
               </Button>
             </Link>
 
-            <Link href="/resources">
+            <Link href="/deparments">
               <Button variant="ghost" className="text-[#2F557F] text-base">
-                Resources
+                Department
               </Button>
             </Link>
           </div>
 
           {/* Desktop Right Side */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Link href="#" className="text-[#2F557F] hover:text-primary">
+          <Link href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY" className="text-[#2F557F] hover:text-primary">
+              <FaYoutube className="h-5 w-5" />
+            </Link>
+            <Link href="https://www.facebook.com/bugemauniversitymainSDAchurch" className="text-[#2F557F] hover:text-primary">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-[#2F557F] hover:text-primary">
+            <Link href="https://www.tiktok.com/@sda.church.bugema?_t=ZM-8v8ilSFxNQ6&_r=1" className="text-[#2F557F] hover:text-primary">
               <PiTiktokLogoBold className="h-5 w-5" />
             </Link>
           
@@ -138,13 +141,18 @@ export function MainNav() {
                 Our Beliefs
                   </Button>
               </a>
+              <Link href="/Sermons">
+              <Button variant="ghost" className="text-[#2F557F] text-base">
+                Sermons
+              </Button>
 
+            </Link>
               <Link
-                href="/resources"
+                href="/departments"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                Resources
+                Departments
               </Link>
             </div>
           </div>
