@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { PiTiktokLogoBold } from "react-icons/pi";
+import { FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -37,9 +38,11 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex gap-4 mb-4 md:mb-0" data-aos="fade-up">
-            <Link href="#" className="text-gray-400 hover:text-white">
-              Our beliefs
-            </Link>
+          <a href="https://www.adventist.org/beliefs/" 
+              target="_blank" 
+              rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+               Our Beliefs
+             </a>
             <Link href="#" className="text-gray-400 hover:text-white">
               Privacy Policy
             </Link>
@@ -48,10 +51,13 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex gap-4" data-aos="fade-up" data-aos-delay="200">
-            <Link href="#" className="text-gray-400 hover:text-white">
+          <Link href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY" className="text-gray-400 hover:text-white">
+              <FaYoutube className="h-5 w-5" />
+            </Link>
+            <Link href="https://www.facebook.com/bugemauniversitymainSDAchurch" className="text-gray-400 hover:text-white">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white">
+            <Link href="https://www.tiktok.com/@sda.church.bugema?_t=ZM-8v8ilSFxNQ6&_r=1" className="text-gray-400 hover:text-white">
               <PiTiktokLogoBold className="h-5 w-5" />
             </Link>
           </div>
