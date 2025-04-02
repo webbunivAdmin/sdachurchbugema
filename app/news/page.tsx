@@ -12,9 +12,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { EventsCard } from "@/components/events";
-import { FaFacebookSquare } from "react-icons/fa";
-import { PiTiktokLogoBold } from "react-icons/pi";
-
 
 export default function NewsPage() {
   useEffect(() => {
