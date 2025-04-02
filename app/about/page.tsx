@@ -9,10 +9,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
-import { FaFacebookSquare } from "react-icons/fa";
-import { PiTiktokLogoBold } from "react-icons/pi";
-
-
 export default function AboutPage() {
   useEffect(() => {
     AOS.init({
