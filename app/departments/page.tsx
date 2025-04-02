@@ -10,15 +10,15 @@ import { FileText } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-useEffect(() => {
+export default function DepartmentsPage() { // Corrected component name
+  const [activeTab, setActiveTab] = useState("documents");
+
+  useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
-}, []);
-
-export default function deparmentsPage() {
-  const [activeTab, setActiveTab] = useState("documents");
+  }, []); // Moved useEffect inside the component
 
   const sermons = [
     {
@@ -135,11 +135,11 @@ export default function deparmentsPage() {
               title={video.title}
               image={video.image}
               date={video.date}
-              category={""} videoId={""}            />
+              category={""} videoId={""}
+            />
           ))}
         </section>
       )}
-      
     </main>
   );
 }
