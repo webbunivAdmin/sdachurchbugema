@@ -3,9 +3,6 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
 import AOS from "aos";
@@ -48,7 +45,6 @@ export default function EventDetail({ params }: EventDetailProps) {
   }, []);
 
   const event = getEventData(params.slug);
-=======
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -70,8 +66,6 @@ export default function DepartmentsPage() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
->>>>>>> Stashed changes
-=======
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -93,8 +87,6 @@ export default function DepartmentsPage() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
->>>>>>> Stashed changes
-=======
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -116,15 +108,9 @@ export default function DepartmentsPage() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
->>>>>>> Stashed changes
-
   return (
     <main className="min-h-screen overflow-hidden pr-16">
       <MainNav />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
       <article className="pt-32 pb-16">
         <div className="container mx-auto px-4">
           <Link
@@ -178,7 +164,6 @@ export default function DepartmentsPage() {
           </div>
         </div>
       </article>
-=======
       <div className="container mx-auto px-4 mt-20">
         <h2 className="text-xl font-bold text-center mb-8 ">
           CHURCH LEADERSHIP
@@ -204,8 +189,6 @@ export default function DepartmentsPage() {
           ))}
         </div>
       </div>
->>>>>>> Stashed changes
-=======
       <div className="container mx-auto px-4 mt-20">
         <h2 className="text-xl font-bold text-center mb-8 ">
           CHURCH LEADERSHIP
@@ -231,8 +214,6 @@ export default function DepartmentsPage() {
           ))}
         </div>
       </div>
->>>>>>> Stashed changes
-=======
       <div className="container mx-auto px-4 mt-20">
         <h2 className="text-xl font-bold text-center mb-8 ">
           CHURCH LEADERSHIP
@@ -258,7 +239,6 @@ export default function DepartmentsPage() {
           ))}
         </div>
       </div>
->>>>>>> Stashed changes
     </main>
   );
 }
