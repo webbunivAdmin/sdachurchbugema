@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MainNav } from "@/components/main-nav";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
 import AOS from "aos";
@@ -93,10 +94,34 @@ export default function DepartmentsPage() {
     AOS.init({ duration: 1000 });
   }, []);
 >>>>>>> Stashed changes
+=======
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+type Leader = {
+  name: string;
+  role: string;
+  imgSrc: string;
+};
+
+const leaders: Leader[] = [
+  { name: "PASTOR CALEB MBABALI", role: "Chaplain", imgSrc: "/MALE.jpg" },
+  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE.jpg" },
+  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
+  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
+  // ...add more as needed
+];
+
+export default function DepartmentsPage() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+>>>>>>> Stashed changes
 
   return (
     <main className="min-h-screen overflow-hidden pr-16">
       <MainNav />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -153,6 +178,33 @@ export default function DepartmentsPage() {
           </div>
         </div>
       </article>
+=======
+      <div className="container mx-auto px-4 mt-20">
+        <h2 className="text-xl font-bold text-center mb-8 ">
+          CHURCH LEADERSHIP
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {leaders.map((leader) => (
+            <div
+              key={leader.name}
+              className="flex flex-col items-center text-center"
+              data-aos="fade-up"
+            >
+              <Image
+                src={leader.imgSrc}
+                alt={leader.name}
+                width={150}
+                height={150}
+                className="rounded-full object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold">{leader.name}</h3>
+              <p className="text-gray-600">{leader.role}</p>
+            </div>
+            
+          ))}
+        </div>
+      </div>
+>>>>>>> Stashed changes
 =======
       <div className="container mx-auto px-4 mt-20">
         <h2 className="text-xl font-bold text-center mb-8 ">
