@@ -38,7 +38,34 @@ export default function Home() {
 
         {/* Weekly Sermons Section */}
         <section className="relative py-24">
+<<<<<<< Updated upstream
           {/* ... existing content ... */}
+=======
+          <Image
+            src="/WEELKLY SERMON BG.jpg"
+            alt="Prayer background"
+            fill
+            className="object-cover brightness-50"
+          />
+          <div className="relative container mx-auto">
+            <div className="max-w-lg" data-aos="fade-up">
+              <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-white mb-4">
+                A Word From God
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Weekly <span className="text-highlight">Sermons</span>
+              </h2>
+              <p className="text-white mb-6">
+                We worship God by remembering the gospel through preaching,
+                teaching, singing, praying and celebrating baptism and
+                communion.
+              </p>
+              <Link href="/Sermons">
+                <Button className="bg-[#2F557F] hover:bg-[#3a6699]">All Sermons</Button>   
+              </Link>
+            </div>
+          </div>
+>>>>>>> Stashed changes
         </section>
 
         {/* News & Events Section */}
