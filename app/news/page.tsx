@@ -105,6 +105,7 @@ export default function NewsPage() {
                 </a>
           </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <div className="grid md:grid-cols-3 gap-8">
             <VideoCard
               title="ANN Video Full Episode - January 24, 2025"
@@ -127,6 +128,10 @@ export default function NewsPage() {
               category="NOTEWORTHY VIDEOS"
               videoId="TehSYJfQPXc?si=4XxbpERuCZ7ZaFn-"
             />
+=======
+          <div className=" gap-6 scrollbar-hide px-10">
+            <YouTubeVideos />
+>>>>>>> Stashed changes
 =======
           <div className=" gap-6 scrollbar-hide px-10">
             <YouTubeVideos />
