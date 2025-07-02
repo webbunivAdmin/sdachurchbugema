@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { EventsCard } from "@/components/events";
+import YouTubeVideos from "@/components/YouTubeVideos";
 
 export default function NewsPage() {
   useEffect(() => {
@@ -98,35 +99,17 @@ export default function NewsPage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-white">Latest videos</h2>
-            <Link
-              href="/videos"
+            <a
+              href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white flex items-center gap-2 hover:text-gray-300"
             >
               Watch more videos <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <VideoCard
-              title="ANN Video Full Episode - January 24, 2025"
-              image="/_MG_2211.JPG"
-              date="January 24, 2025"
-              category="ANN ENGLISH"
-              videoId="5MBOnP2TEO4?si=XBR9r-opxofUxFVm"
-            />
-            <VideoCard
-              title="Exploring Church Discipline in the Adventist Church Manual | ANN In-Depth"
-              image="/_MG_2240.JPG"
-              date="January 27, 2025"
-              category="ANN IN-DEPTH"
-              videoId="BgmmBcbuKJA?si=95Dyewizx-FaABSA"
-            />
-            <VideoCard
-              title="The Great Controversy Chapter 39: The Time of Trouble"
-              image="/_MG_2211.JPG"
-              date="January 24, 2025"
-              category="NOTEWORTHY VIDEOS"
-              videoId="TehSYJfQPXc?si=4XxbpERuCZ7ZaFn-"
-            />
+          <div>
+            <YouTubeVideos />
           </div>
         </div>
       </section>
