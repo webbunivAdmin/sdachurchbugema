@@ -5,8 +5,6 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Play } from "lucide-react"
 import { VideoModal } from "./video-modal"
-import  YouTubeVideos from "@/components/YouTubeVideos";
-
 
 interface VideoCardProps {
   title: string
