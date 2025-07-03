@@ -7,13 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Facebook } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
 import { FaYoutube } from "react-icons/fa";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
