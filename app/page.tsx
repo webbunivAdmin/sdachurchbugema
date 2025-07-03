@@ -38,9 +38,6 @@ export default function Home() {
 
         {/* Weekly Sermons Section */}
         <section className="relative py-24">
-<<<<<<< Updated upstream
-          {/* ... existing content ... */}
-=======
           <Image
             src="/WEELKLY SERMON BG.jpg"
             alt="Prayer background"
@@ -65,7 +62,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
->>>>>>> Stashed changes
         </section>
 
         {/* News & Events Section */}
