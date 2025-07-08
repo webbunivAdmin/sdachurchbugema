@@ -93,7 +93,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Latest Videos */}
+     
       <section className="py-8 md:px-8 bg-[#2F557F]">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">

@@ -6,6 +6,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MainNav } from "@/components/main-nav";
 import { HeroCarousel } from "@/components/hero-carousel";
+import {
+  Card,
+  CardContent
+} from "@/components/ui/card"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
