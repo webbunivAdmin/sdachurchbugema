@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainNav } from "@/components/main-nav";
 import { NewsCard } from "@/components/news-card";
-import { VideoCard } from "@/components/video-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
@@ -94,7 +93,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Latest Videos */}
+     
       <section className="py-8 md:px-8 bg-[#2F557F]">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">

@@ -76,7 +76,7 @@ export function MainNav() {
                 Sermons
               </Button>
             </Link>
-            <Link href="/departments">
+            <Link href="/Departments">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Department
               </Button>

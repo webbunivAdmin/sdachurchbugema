@@ -531,7 +531,7 @@ const tabs = [
   "PUBLISHING MINISTRY",
 ];
 
-export default function departmentsPage() {
+export default function DepartmentsPage() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   useEffect(() => {
@@ -549,11 +549,14 @@ export default function departmentsPage() {
       <div className="text-center my-6 pt-24">
         <div className="text-center my-10 pt-13">
           <div className="w-64 mx-auto aspect-rectangle overflow-hidden rounded-lg shadow-md bg-cyan-900 p-4">
-            <img
-              src="/test.jpg"
-              alt="Test"
-              className="w-full h-full object-cover"
-            />
+            <Image
+  src="/test.jpg"
+  alt="Test"
+  width={400}
+  height={300}
+  className="w-full h-full object-cover"
+/>
+
           </div>
         </div>
         <h2 className="text-4xl md:text-6xl font-bold text-cyan-900 mb-6">
