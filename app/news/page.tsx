@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainNav } from "@/components/main-nav";
 import { NewsCard } from "@/components/news-card";
+import { VideoCard } from "@/components/video-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import YouTubeVideos from "@/components/YouTubeVideos";
 
 import { EventsCard } from "@/components/events";
+import YouTubeVideos from "@/components/YouTubeVideos";
 
 export default function NewsPage() {
   useEffect(() => {
@@ -93,25 +94,27 @@ export default function NewsPage() {
         </div>
       </section>
 
-     
+      {/* Latest Videos */}
       <section className="py-8 md:px-8 bg-[#2F557F]">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-white">Latest videos</h2>
-            <a href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white flex items-center gap-2 hover:text-gray-300"
->
+            >
               Watch more videos <ArrowRight className="h-4 w-4" />
-                </a>
+            </a>
           </div>
-          
-          <div className=" gap-6 scrollbar-hide px-10">
+          <div>
             <YouTubeVideos />
-            </div>
-            </div>
+          </div>
+        </div>
       </section>
 
-      
+      {/* Events */}
       <section className="py-10 md:px-8">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
