@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainNav } from "@/components/main-nav";
 import { NewsCard } from "@/components/news-card";
-import { VideoCard } from "@/components/video-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
