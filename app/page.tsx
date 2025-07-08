@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { MainNav } from "@/components/main-nav";
 import { HeroCarousel } from "@/components/hero-carousel";
 import AOS from "aos";
