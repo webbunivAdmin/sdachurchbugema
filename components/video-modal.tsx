@@ -2,6 +2,7 @@
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
+
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
