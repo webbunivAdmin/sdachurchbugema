@@ -58,20 +58,34 @@ export default function NewsPage() {
         <div className="p-5 mb-10 flex flex-col md:flex-row gap-10 md:gap-5 justify-center items-center">
           <div className="flex flex-col justify-start">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-sm text-gray-500">March 13, 2025</span>
-              <span className="text-sm text-primary">CRISIS</span>
+              <span className="text-sm text-gray-500">SEPT 7TH-13TH, 2025</span>
             </div>
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-              North Buganda Conference Moves Quickly to Mobilize Outreach as
-              Wildfires Descend
+              BUGEMA A DISTRICT CAMPMEETING
             </h1>
             <p className="text-gray-600 mb-6">
-              The Southern California Conference has been serving as a central
-              hub for providing aid to impacted communities.
+              This years camp meeting is held under the theme:
+“I Will Go  Making Disciples of Jesus Christ.”
+
+The spiritual gathering will feature inspiring messages, Bible study, and uplifting worship sessions designed to strengthen the faith of believers and equip them for discipleship.
+
+Key speakers for the week-long event include:
+
+Pr. Mutaaya Fredrick:  Host
+
+Eld. Namansa Julius: Second Speaker
+
+Pr. Kisaakye Emmanuel: Guest Speaker
+
+The daily sessions will run from 8:30 AM to 8:30 PM, offering a full day of worship, teachings, and fellowship for all attendees.
+
+Members, families, and the wider community are warmly invited to attend and experience a week of spiritual revival and growth
             </p>
+            {/*  
             <Link href="/news/north-buganda">
               <Button className="w-fit">Read More</Button>
             </Link>
+            */}
           </div>
           <div className="flex flex-col justify-start">
             <div className="flex items-center gap-2 mb-4">
@@ -86,9 +100,11 @@ export default function NewsPage() {
               The Southern California Conference has been serving as a central
               hub for providing aid to impacted communities.
             </p>
+            {/*
             <Link href="/news/southern-california">
               <Button className="w-fit">Read More</Button>
             </Link>
+            */}
           </div>
         </div>
       </section>
