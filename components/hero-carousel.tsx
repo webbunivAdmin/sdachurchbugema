@@ -1,14 +1,38 @@
 "use client";
 
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const images = ["/_MG_7809.JPG", "/_MG_2211.JPG", "/_MG_2240.JPG"];
+const slides = [
+  {
+    src: "/CAMPMEETING.jpg",
+    badge: "ON GOING",
+    title: "Bugema A DISTRICT",
+    subtitle: "CAMPMEETING",
+    description: "I WILL GO MAKING DISCIPLES OF JESUS CHRIST",
+    cta: "CLICK TO VIEW PROGRAM",
+  },
+  {
+    src: "/_MG_2211.JPG",
+    badge: "Experience",
+    title: "Worship & Fellowship",
+    subtitle: "United in Christ",
+    description: "A family that prays together grows together.",
+    cta: "Be Part of Us",
+  },
+  {
+    src: "/_MG_2240.JPG",
+    badge: "Discover",
+    title: "Faith in Action",
+    subtitle: "Serving with Love",
+    description: "Living the gospel through service and compassion.",
+    cta: "Get Involved",
+  },
+];
 
 export function HeroCarousel() {
   useEffect(() => {
@@ -31,10 +55,10 @@ export function HeroCarousel() {
   return (
     <section className="relative min-h-screen pt-5 overflow-hidden">
       <Slider {...settings}>
-        {images.map((src, index) => (
+        {slides.map((slide, index) => (
           <div key={index} className="relative h-screen">
             <Image
-              src={src || "/placeholder.svg"}
+              src={slide.src || "/placeholder.svg"}
               alt={`Church gathering ${index + 1}`}
               fill
               className="object-cover brightness-50"
@@ -48,38 +72,38 @@ export function HeroCarousel() {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Welcome to
+                  {slide.badge}
                 </div>
                 <div
                   className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2F557F] mb-4"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Bugema University
+                  {slide.title}
                 </div>
                 <div
-                  className="text-2xl sm:text-4xl lg:text-[50px] font-bold text-white/80 mb-10  w-[850px]"
+                  className="text-2xl sm:text-4xl lg:text-[50px] font-bold text-white/80 mb-10 max-w-[850px]"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Seventh-day Adventist Church
+                  {slide.subtitle}
                 </div>
                 <p
-                  className="text-[22px] text-white/80 mb-8"
+                  className="text-[22px] text-white/80 mb-8 max-w-[700px]"
                   data-aos="fade-up"
                   data-aos-delay="400"
                 >
-                  Building Faith, Strengthening Community, Preparing for His
-                  Return.
+                  {slide.description}
                 </p>
               </div>
-              <div className="px-4 lg:px-10">
+              <div className="px-8 lg:px-10">
                 <Button
-                  className="bg-[#2F557F] hover:bg-[#2F557F] text-white w-[100px] text-lg rounded-full px-[66px] py-5"
+                  className="bg-[#2F557F] hover:bg-[#2F557F] text-white text-lg rounded-full px-[50px] py-5"
                   data-aos="fade-up"
                   data-aos-delay="600"
                 >
-                  Join Us Now
+                  <a href="/Bugema A camp meeting programe.pdf" target="_blank"
+              rel="noopener noreferrer">{slide.cta}</a>
                 </Button>
               </div>
             </div>

@@ -6,6 +6,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MainNav } from "@/components/main-nav";
 import { HeroCarousel } from "@/components/hero-carousel";
+import {
+  Card,
+  CardContent
+} from "@/components/ui/card"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -175,16 +179,16 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/news 1.JPG"
+                      src="/CAMPMEETING FLYER.jpg"
                       alt="New Year Statement"
                       fill
                       className="object-cover rounded"
                     />
                   </div>
                   <h3 className="font-bold mb-2">
-                    Ten days of Prayerled by Pastor Mayambala
+                    ON GOING BUGEMA A DISTRICT CAMPMEETING
                   </h3>
-                  <p className="text-gray-500 text-sm">January 2, 2025</p>
+                  <p className="text-gray-500 text-sm">SEPT 7TH-13TH, 2025</p>
                 </CardContent>
               </Card>
               <Card data-aos="fade-up" data-aos-delay="400">
