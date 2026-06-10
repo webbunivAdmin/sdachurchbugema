@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MainNav } from "@/components/main-nav";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 type Leader = {
   name: string;
@@ -629,7 +630,7 @@ export default function DepartmentsPage() {
         <div className="text-center my-10 pt-13">
           <div className="w-64 mx-auto aspect-rectangle overflow-hidden rounded-lg shadow-md bg-cyan-900 ">
             <img
-              src="MBABALI CALEB-CHAPLAIN.jpg"
+              src={cloudinaryImage("/MBABALI CALEB-CHAPLAIN.jpg")}
               alt=""
               className="w-full h-full object-cover"
             />
@@ -673,7 +674,7 @@ export default function DepartmentsPage() {
               <div className="w-full aspect-square bg-gray-200 rounded-lg overflow-hidden">
                 {leader.img ? (
                   <Image
-                    src={leader.img}
+                    src={cloudinaryImage(leader.img)}
                     alt={leader.name}
                     width={300}
                     height={300}

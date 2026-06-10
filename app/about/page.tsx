@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function AboutPage() {
       <section className="relative pt-20">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/ABOUT SDAC.JPG"
+            src={cloudinaryImage("/ABOUT SDAC.JPG")}
             alt="Church background"
             fill
             className="object-cover brightness-50"

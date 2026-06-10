@@ -7,6 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 interface NewsDetailProps {
   params: { slug: string };
@@ -68,7 +69,7 @@ export default function NewsDetail({ params }: NewsDetailProps) {
 
             <div className="relative h-[400px] w-full mb-8" data-aos="fade-up">
               <Image
-                src={news.image || "/placeholder.svg"}
+                src={cloudinaryImage(news.image)}
                 alt={news.title}
                 fill
                 className="object-cover rounded-lg"

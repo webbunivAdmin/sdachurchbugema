@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Play } from "lucide-react"
 import { VideoModal } from "./video-modal"
+import { cloudinaryImage } from "@/lib/cloudinary"
 
 interface VideoCardProps {
   title: string
@@ -22,7 +23,7 @@ export function VideoCard({ title, image, date, category, videoId }: VideoCardPr
       <Card className="overflow-hidden bg-transparent border-0">
         <button onClick={() => setIsModalOpen(true)} className="w-full text-left">
           <div className="relative h-48 w-full group">
-            <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover rounded-lg" />
+            <Image src={cloudinaryImage(image)} alt={title} fill className="object-cover rounded-lg" />
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
               <Play className="w-12 h-12 text-white" />
             </div>
@@ -41,4 +42,3 @@ export function VideoCard({ title, image, date, category, videoId }: VideoCardPr
     </>
   )
 }
-

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Facebook } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
 import { FaYoutube } from "react-icons/fa";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,9 @@ export function MainNav() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/NAV LOGO.png"
+              src={cloudinaryImage(
+                "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099813/NAV_LOGO_kph0ey.png"
+              )}
               alt="Church Logo"
               width={180}
               height={50}

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { PiTiktokLogoBold } from "react-icons/pi";
 import { FaYoutube } from "react-icons/fa6";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div data-aos="fade-up">
             <Image
-              src="/logo.png"
+              src={cloudinaryImage("/logo.png")}
               alt="Church Logo"
               width={200}
               height={100}

@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 
 import { EventsCard } from "@/components/events";
 import YouTubeVideos from "@/components/YouTubeVideos";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export default function NewsPage() {
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function NewsPage() {
           <div className="w-full">
             <div className="relative h-[400px] lg:h-[500px]">
               <Image
-                src="/_MG_7809.JPG"
+                src={cloudinaryImage("/_MG_7809.JPG")}
                 alt="Southern California Conference Mobilizes"
                 fill
                 className="object-cover rounded-lg"

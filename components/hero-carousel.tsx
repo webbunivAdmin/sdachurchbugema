@@ -6,10 +6,11 @@ import Slider from "react-slick";
 import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 const slides = [
   {
-    src: "/CAMPMEETING.jpg",
+    src: "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099827/CAMPMEETING_cqfcnv.jpg",
     badge: "ON GOING",
     title: "Bugema A DISTRICT",
     subtitle: "CAMPMEETING",
@@ -17,7 +18,7 @@ const slides = [
     cta: "CLICK TO VIEW PROGRAM",
   },
   {
-    src: "/_MG_2211.JPG",
+    src: "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099554/WEELKLY_SERMON_BG_o7yzen.jpg",
     badge: "Experience",
     title: "Worship & Fellowship",
     subtitle: "United in Christ",
@@ -25,7 +26,7 @@ const slides = [
     cta: "Be Part of Us",
   },
   {
-    src: "/_MG_2240.JPG",
+    src: "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099550/_MG_2240_ou4g2e.jpg",
     badge: "Discover",
     title: "Faith in Action",
     subtitle: "Serving with Love",
@@ -58,7 +59,7 @@ export function HeroCarousel() {
         {slides.map((slide, index) => (
           <div key={index} className="relative h-screen">
             <Image
-              src={slide.src || "/placeholder.svg"}
+              src={cloudinaryImage(slide.src)}
               alt={`Church gathering ${index + 1}`}
               fill
               className="object-cover brightness-50"
@@ -102,8 +103,13 @@ export function HeroCarousel() {
                   data-aos="fade-up"
                   data-aos-delay="600"
                 >
-                  <a href="/Bugema A camp meeting programe.pdf" target="_blank"
-              rel="noopener noreferrer">{slide.cta}</a>
+                  <a
+                    href="/Bugema A camp meeting programe.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {slide.cta}
+                  </a>
                 </Button>
               </div>
             </div>

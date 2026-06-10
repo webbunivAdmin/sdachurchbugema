@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export default function SermonsPage() {
   useEffect(() => {
@@ -64,7 +65,7 @@ export default function SermonsPage() {
         <div className="w-full">
           <div className="relative h-[400px] lg:h-[500px]">
             <Image
-              src="/_MG_7809.JPG"
+              src={cloudinaryImage("/_MG_7809.JPG")}
               alt="Southern California Conference Mobilizes"
               fill
               className="object-cover rounded-lg"

@@ -16,6 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Cloudinary Images
+
+Set this environment variable to serve site images from Cloudinary:
+
+```bash
+NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL=https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/f_auto,q_auto/YOUR_FOLDER
+```
+
+Upload the images with the same filenames used in the app, for example `ABOUT SDAC.JPG` and `NAV LOGO.png`. If the variable is not set, the site falls back to the matching files in `public/`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

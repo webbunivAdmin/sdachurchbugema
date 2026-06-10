@@ -7,6 +7,7 @@ import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 interface EventDetailProps {
   params: { slug: string };
@@ -72,7 +73,7 @@ export default function EventDetail({ params }: EventDetailProps) {
 
             <div className="relative h-[400px] w-full mb-8" data-aos="fade-up">
               <Image
-                src={event.image || "/placeholder.svg"}
+                src={cloudinaryImage(event.image)}
                 alt={event.title}
                 fill
                 className="object-cover rounded-lg"

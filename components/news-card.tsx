@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
+import { cloudinaryImage } from "@/lib/cloudinary"
 
 interface NewsCardProps {
   title: string
@@ -15,7 +16,7 @@ export function NewsCard({ title, image, date, category, description }: NewsCard
     <Card className="overflow-hidden">
       <Link href={`/news/${title}`} className="block">
         <div className="relative h-48 w-full">
-          <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
+          <Image src={cloudinaryImage(image)} alt={title} fill className="object-cover" />
         </div>
         <CardContent className="p-4">
           <div className="flex items-center gap-2 mb-2">

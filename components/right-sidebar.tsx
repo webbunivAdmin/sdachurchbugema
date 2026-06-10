@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export function RightSidebar() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -31,7 +32,9 @@ export function RightSidebar() {
         {/* Change Logo on Scroll */}
         {scrollPercentage < 50 ? (
           <Image
-            src="/logo.png"
+            src={cloudinaryImage(
+              "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099534/logo_acbnjh.png"
+            )}
             alt="SDA Logo"
             layout="fill"
             objectFit="contain"
@@ -39,7 +42,9 @@ export function RightSidebar() {
           />
         ) : (
           <Image
-            src="/logo 2.png"
+            src={cloudinaryImage(
+              "https://res.cloudinary.com/dgbrwewiy/image/upload/v1781099533/logo_2_gy1gxj.png"
+            )}
             alt="SDA Logo"
             layout="fill"
             objectFit="contain"
@@ -49,5 +54,4 @@ export function RightSidebar() {
       </div>
     </div>
   );
-  
 }

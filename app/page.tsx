@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { cloudinaryImage } from "@/lib/cloudinary";
 
 export default function Home() {
   useEffect(() => {
@@ -124,7 +125,7 @@ export default function Home() {
               </div>
               <div className="relative h-[400px]" data-aos="fade-left">
                 <Image
-                  src="/ABOUT SDAC.JPG"
+                  src={cloudinaryImage("/ABOUT SDAC.JPG")}
                   alt="Church activities"
                   fill
                   className="object-cover rounded-lg"
@@ -137,7 +138,7 @@ export default function Home() {
         {/* Weekly Sermons Section */}
         <section className="relative py-24">
           <Image
-            src="/WEELKLY SERMON BG.jpg"
+            src={cloudinaryImage("/WEELKLY SERMON BG.jpg")}
             alt="Prayer background"
             fill
             className="object-cover brightness-50"
@@ -179,7 +180,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/CAMPMEETING FLYER.jpg"
+                      src={cloudinaryImage("/CAMPMEETING FLYER.jpg")}
                       alt="New Year Statement"
                       fill
                       className="object-cover rounded"
@@ -195,7 +196,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/news 3.png"
+                      src={cloudinaryImage("/news 3.png")}
                       alt=""
                       fill
                       className="object-cover rounded"
@@ -211,7 +212,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/news 3.png"
+                      src={cloudinaryImage("/news 3.png")}
                       alt=""
                       fill
                       className="object-cover rounded"
